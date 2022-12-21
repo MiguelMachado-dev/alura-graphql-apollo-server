@@ -10,7 +10,7 @@ class UserAPI extends RESTDataSource {
     return this.get('users');
   }
 
-  async getUser(id) {
+  async getUserById(id) {
     return this.get(`users/${id}`);
   }
 }
