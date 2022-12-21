@@ -14,3 +14,5 @@ class UserAPI extends RESTDataSource {
     return this.get(`users/${id}`);
   }
 }
+
+module.exports = UserAPI;

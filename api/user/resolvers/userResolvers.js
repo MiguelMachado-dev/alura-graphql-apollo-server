@@ -1,19 +1,7 @@
-const arrayUsers = [
-  {
-    nome: "Ana",
-    ativo: true,
-  },
-  {
-    nome: "Marcia",
-    ativo: false
-  }
-]
-
 const userResolvers = {
   Query: {
-    users: () => arrayUsers,
-    primeiroUser: () => arrayUsers[0]
-  }
-}
+    users: (root, args, { dataSources }) => dataSources.userAPI.getUsers(),
+  },
+};
 
-module.exports = userResolvers
+module.exports = userResolvers;
